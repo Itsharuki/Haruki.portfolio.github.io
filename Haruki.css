@@ -1,0 +1,1616 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* ######### R E G U L A R  F O N T S ###########*/
+@font-face {
+    font-family: "SF_BLACK";
+    src: url(FONT/SF_PRO/SF_PRO_DISPLAY_BLACK.otf);
+}
+@font-face {
+    font-family: "SF_BOLD";
+    src: url(FONT/SF_PRO/SF_PRO_DISPLAY_BOLD.OTF);
+}
+@font-face {
+    font-family: "SF_MEDIUM";
+    src: url(FONT/SF_PRO/SF_PRO_DISPLAY_MEDIUM.OTF);
+}
+@font-face {
+    font-family: "SF_REGULAR";
+    src: url(FONT/SF_PRO/SF_PRO_DISPLAY_REGULAR.OTF);
+}
+
+/*############## ITL = ITALIC ################*/
+@font-face { 
+    font-family: "SF_SEMIBOLD_ITL";
+    src: url(FONT/SF_PRO/SF_PRO_DISPLAY_SEMI_BOLD_ITL.OTF);
+}
+@font-face {
+    font-family: "SF_BLACK_ITL";
+    src: url(FONT/SF_PRO/SF_PRO_DISPLAY_BLACK_ITL.OTF);
+}
+@font-face {
+    font-family: "SF_HEAVY_ITL";
+    src: url(FONT/SF_PRO/SF_PRO_DISPLAY_HEAVY_ITL.OTF);
+}
+@font-face {
+    font-family: "SF_LIGHT_ITL";
+    src: url(FONT/SF_PRO/SF_PRO_DISPLAY_LIGHT_ITL.OTF);
+}
+@font-face {
+    font-family: "SF_THIN_ITL";
+    src: url(FONT/SF_PRO/SF_PRO_DISPLAY_THIN_ITL.OTF);
+}
+
+/*#################################  C S S  D E S I G N  #################################*/
+
+/*#################################  N A V  B A R  #################################*/
+
+body{
+    background: white;
+    color: black;
+}
+
+.icon-top{
+    width: 32px;
+    height: 32px;
+}
+
+#nav{
+    width: 100%;
+    background: white;
+    z-index: 1000000;
+}
+
+.container_nav{
+    padding: 10px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 160px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+    font-weight: bolder;
+}
+
+nav ul li a{
+    font-family: SF_BLACK;
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+}
+
+nav ul button{
+    font-family: SF_BOLD;
+    background-color: #013567;
+    color: white;
+    width: 150px;
+    height: 35px;
+    border-radius: 15px;
+    border: none;
+    font-size: 15px;
+}
+
+nav ul button:hover{
+    color: black;
+    transition: 0.8s;
+    background: transparent;
+    background-color: #ADE8F4;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #013567;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.6s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.sticky{
+    position:fixed;
+    margin-top: 0px;
+    width: 100%;
+}
+
+.content{
+    padding-left: 10px; 
+}
+
+.sticky + .content{
+    padding-top: 60px;
+    
+}
+
+/*#################################  H E A D E R  #################################*/
+
+#header{
+    width: 100%;
+    height: 120vh;
+    background-image: url(HEADER/header-photo.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.container_header{
+    position: relative;
+    padding: 100px 5%;
+}
+
+/*#################################  H E A D E R  T E X T  #################################*/
+
+.firstName{
+    position: relative;
+}
+
+.firstName h1{
+    margin-top: 50px;
+    font-family: SF_BLACK;
+    text-align: right;
+    color: white;
+    text-shadow: 10px 5px 5px black;
+    font-size: 90px;
+    -webkit-text-stroke: 3px black;
+    margin-right: 250px;
+}
+
+.lastName{
+    justify-content: right;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.lastName h1{
+    margin-top: -35px;
+    font-family: SF_BLACK;
+    text-align: right;
+    color: white;
+    text-shadow: 10px 5px 5px black;
+    font-size:150px;
+    -webkit-text-stroke: 3px black;
+}
+
+
+
+.line{
+    width: 110px;
+    color: white;
+    height: 15px;
+    background-color: white;
+    box-shadow: 10px 5px 5px black;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    position: relative;
+    margin-right: 20px;
+}
+
+#expertise{
+    float: right;
+    margin-top: -100px;
+}
+
+.expertise-main{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.expertise-info{
+    text-align: justify;
+    width: 600px;
+}
+
+.vid-info, .graph-info, .prog-info{
+    position: relative;
+}
+
+.vic, .graph, .programming{
+    position: relative;
+}
+
+.vid h1, .graph h1, .programming h1{
+    font-family: SF_BOLD;
+    font-size: 25px;
+    margin-top: 120px;
+    color: #013567;
+}
+
+.vid-info p, .graph-info p, .prog-info p{
+    margin-top: 5px;
+    font-family: SF_MEDIUM;
+    font-size: 20px;
+    cursor: default;
+}
+
+.graph-info p, .prog-info p{
+    color: transparent;
+}
+
+body:has(.vid h1:hover) .graph-info p,body:has(.vid h1:hover) .prog-info p{
+    color: transparent;
+}
+
+body:has(.graph h1:hover) .graph-info p{
+    transition: 1.5s;
+    color: black;
+}
+
+body:has(.graph h1:hover) .vid-info p,body:has(.graph h1:hover) .prog-info p{
+    display: none;
+    transition: 0.8s;
+}
+
+body:has(.programming h1:hover) .prog-info p{
+    transition: 1.5s;
+    color: black;
+}
+
+body:has(.programming h1:hover) .vid-info p,body:has(.programming h1:hover) .graph-info p{
+    display: none;
+}
+
+
+/*#################################  A B O U T  #################################*/
+
+#aboutMe{
+    width: 100%;
+    height: 100vh;
+    background-color: #013567;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.aboutMe-container{
+    position: relative;
+    padding: 10px 1%;
+    background-size: cover;
+    background-position: center;
+    background-color: #013567;
+}
+
+.aboutMe-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/*#################################  A B O U T  C O N T E N T S  #################################*/
+
+.aboutMe-photo .square1{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 20px;
+    position:absolute;
+    margin-left: 650px;
+    margin-top: 55px;
+}
+
+.aboutMe-photo .square2{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 20px;
+    position:absolute;
+    margin-top: 740px;
+    margin-left: 50px;
+}
+
+.aboutMe-photo{
+    position: relative;
+    
+}
+
+.aboutMe-photo img{
+    margin-top: 100px;
+    margin-left: 100px;
+    border-radius: 10px;
+}
+
+.aboutMe-text{
+    position: relative;
+}
+
+.aboutMe-text-place{
+    background-color: #013567;
+}
+
+.text-square{
+    background-color: transparent;
+    height: 500px;
+    width: 620px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.text-square p{
+    text-align: justify;
+    font-family: SF_MEDIUM;
+    font-size: 30px;
+    color: white;
+}
+
+
+.aboutMe-text h1{
+    font-family: SF_BOLD;
+    color: white;
+    margin-left: 120px;
+    margin-top: 180px;
+    font-size: 70px;
+}
+
+/*#################################  M Y  I N F O  #################################*/
+
+#myInfo{
+    top: 140px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.myInfo_container{
+    position: relative;
+    padding: 10px 5%;
+}
+
+.myInfo_row{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/*#################################  H O B B I E S  #################################*/
+
+.hobbies{
+    width: 539px;
+    height: 814px;
+    background-color: #E8E8E8;
+    border-radius: 20px;
+    position: relative;
+}
+
+.hobbies:hover{
+    transform: translateY(-4vh);
+    transition: .8s;
+}
+
+.hobbies h1{
+    font-family: SF_REGULAR;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 30px;
+}
+
+.hobbies ul li{
+    text-align: right;
+    list-style: none;
+    font-family: SF_BOLD;
+    margin-top: 70px;
+    margin-right: 20px;
+}
+
+.hobbies a{
+    text-decoration: none;
+    text-align: right;
+    color: black;
+    font-size: 26px;
+}
+
+/*#################################  H O B B I E S  P O P U P  #################################*/
+
+
+#popup_hobby{
+    top: -54%;
+    left: 50%;
+    width: 1700px;
+    height: 850px;
+    background-color: #FFFFFF;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 30px black;
+    border-radius: 35px;
+    visibility: hidden; 
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.hobbies-popup-container img{
+    position: fixed;
+    margin-left: 96.5%;
+    margin-top: 1%;
+    width: 40px;
+}
+
+.hobbies-popup-container h1{
+    font-family: SF_BLACK;
+    color: #013567;
+    margin-left: 95px;
+    margin-top: 40px;
+    font-size: 60px;
+}
+
+.hobbies-box{
+    width: 90%;
+    height: 80%;
+    background-color: #013567;
+    position: fixed;
+    left: 5%;
+    border-radius: 20px;
+}
+
+.whole_container#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#popup_hobby.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 54%;
+}
+
+.hobbies_box_row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.hobbies_box1, .hobbies_box2, .hobbies_box3{
+    width: 440px;
+    height: 532px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    margin-top: 60px;
+}
+
+.hobbies_box1 img, .hobbies_box2 img, .hobbies_box3 img{
+    margin-top: 0;
+    margin-left: 0;
+    width: 440px;
+    height: 532px;
+    position: relative;
+}
+
+.hobbies_box1:hover, .hobbies_box2:hover, .hobbies_box3:hover{
+    transform: translateY(-3vh);
+    transition: 0.8s;
+}
+
+
+
+/*#################################  S K I L L S  #################################*/
+
+.skills{
+    width: 539px;
+    height: 814px;
+    background-color: #E8E8E8;
+    border-radius: 20px;
+    position: relative;
+}
+
+.skills:hover{
+    transform: translateY(-4vh);
+    transition: .8s;
+}
+
+.skills h1{
+    font-family: SF_REGULAR;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 30px;
+}
+
+.skills ul li{
+    text-align: right;
+    list-style: none;
+    font-family: SF_BOLD;
+    margin-top: 140px;
+    margin-right: 20px;
+}
+
+.skills a{
+    text-decoration: none;
+    text-align: right;
+    color: black;
+    font-size: 26px;
+}
+
+/*#################################  S K I L L S  P O P U P  #################################*/
+
+#skills_popup{
+    top: -54%;
+    left: 50%;
+    width: 1700px;
+    height: 850px;
+    background-color: #FFFFFF;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 30px black;
+    border-radius: 35px;
+    visibility: hidden; 
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.skills_popup_container img{
+    position: fixed;
+    margin-left: 96.5%;
+    margin-top: 1%;
+    width: 40px;
+}
+
+.skills_popup_container h1{
+    font-family: SF_BLACK;
+    color: #013567;
+    margin-left: 95px;
+    margin-top: 40px;
+    font-size: 60px;
+}
+
+.skills_box{
+    width: 90%;
+    height: 80%;
+    background-color: #013567;
+    position: fixed;
+    left: 5%;
+    border-radius: 20px;
+}
+
+.whole_container#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#skills_popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 54%;
+}
+
+.skills_box_row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.skills_box1, .skills_box2, .skills_box3{
+    width: 440px;
+    height: 532px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    margin-top: 60px;
+}
+
+.skills_box1 img, .skills_box2 img, .skills_box3 img{
+    margin-top: 0;
+    margin-left: 0;
+    width: 440px;
+    height: 532px;
+    position: relative;
+}
+
+.skills_box1:hover, .skills_box2:hover, .skills_box3:hover{
+    transform: translateY(-3vh);
+    transition: 0.8s;
+}
+
+/*#################################  E D U C A T I O N  #################################*/
+
+.education{
+    width: 539px;
+    height: 814px;
+    background-color: #E8E8E8;
+    border-radius: 20px;
+    position: relative;
+}
+
+.education:hover{
+    transform: translateY(-4vh);
+    transition: .8s;
+}
+
+.education h1{
+    font-family: SF_REGULAR;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 30px;
+}
+
+.education ul li{
+    text-align: right;
+    list-style: none;
+    font-family: SF_BOLD;
+    margin-top: 100px;
+    margin-right: 20px;
+}
+
+.education a{
+    text-decoration: none;
+    text-align: right;
+    color: black;
+    font-size: 26px;
+}
+
+/*#################################  E D U C A T I O N  P O P U P  #################################*/
+
+#educ_popup{
+    top: -54%;
+    left: 50%;
+    width: 1700px;
+    height: 850px;
+    background-color: #FFFFFF;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 30px black;
+    border-radius: 35px;
+    visibility: hidden; 
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.educ_popup_container img{
+    position: fixed;
+    margin-left: 96.5%;
+    margin-top: 1%;
+    width: 40px;
+}
+
+.educ_popup_container h1{
+    font-family: SF_BLACK;
+    color: #013567;
+    margin-left: 95px;
+    margin-top: 40px;
+    font-size: 60px;
+}
+
+.educ_box{
+    width: 90%;
+    height: 80%;
+    background-color: #013567;
+    position: fixed;
+    left: 5%;
+    border-radius: 20px;
+}
+
+.whole_container#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#educ_popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 54%;
+}
+
+.educ_box_row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.educ_box1, .educ_box2, .educ_box3{
+    width: 440px;
+    height: 532px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    margin-top: 60px;
+}
+
+.educ_box1 img, .educ_box2 img, .educ_box3 img{
+    margin-top: 0;
+    margin-left: 0;
+    width: 440px;
+    height: 532px;
+    position: relative;
+}
+
+.educ_box1:hover, .educ_box2:hover, .educ_box3:hover{
+    transform: translateY(-3vh);
+    transition: 0.8s;
+}
+
+/*#################################  S E R V I C E S  #################################*/
+
+#services{
+    width: 100%;
+    background-color: #013567;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top: 40px;
+}
+
+.services-container{
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 10% .1%;
+    width: 100%;
+    background-color: #013567;
+}
+
+.services-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/*#################################  S E R V I C E S  T E X T  C O N T E N T S  #################################*/
+
+.services-text{
+    font-family: SF_BOLD;
+    margin-right: 10px;
+    margin-top: 120px;
+}
+
+.services-text h1{
+    color: white;
+    font-size: 132px;
+}
+
+.services-text p{
+    color: white;
+    text-align: justify;
+}
+
+/*#################################  S E R V I C E S  W O R K S  C O N T E N T S  #################################*/
+
+.service_works{
+    position: relative;
+}
+
+/*#################################  L I N E 1  #################################*/
+
+.line1{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+    
+}
+
+.video_edit{
+    width: 300px;
+    height: 290px;
+    background-color: #FFFFFF;
+    margin-right: 40px;
+
+}
+
+.graph_design{
+    width: 300px;
+    height: 290px;
+    background-color: #FFFFFF;
+    margin-right: 40px;
+}
+
+.programmer{
+    width: 300px;
+    height: 290px;
+    background-color: #FFFFFF;
+    margin-right: 40px;
+}
+
+.video_edit img, .graph_design img, .programmer img{
+    width: 200px;
+    vertical-align: middle;
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 40px;
+}
+
+.video_edit:hover , .programmer:hover, .graph_design:hover{
+    transition: .8s;
+    background-color:  #E8E8E8;
+    transform: scale(1.1);
+}
+
+/*#################################  L I N E 2  #################################*/
+
+.line2{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.webdev{
+    width: 300px;
+    height: 290px;
+    background-color: #FFFFFF;
+    margin-right: 40px;
+}
+
+
+
+.email_management{
+    width: 300px;
+    height: 290px;
+    background-color: #FFFFFF;
+    margin-right: 40px;
+}
+
+
+.copywriting{
+    width: 300px;
+    height: 290px;
+    background-color: #FFFFFF;
+    margin-right: 40px;
+}
+
+
+.webdev img, .email_management img,  .copywriting img{
+    width: 200px;
+    vertical-align: middle;
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 40px;
+}
+
+.webdev:hover , .copywriting:hover, .email_management:hover{
+    transition: .8s;
+    background-color:  #E8E8E8;
+    transform: scale(1.1);
+}
+
+/*#################################  S E R V I C E S  P O P U P S  #################################*/
+
+/*#################################  V I D E O  #################################*/
+
+#video_popup{
+    top: -54%;
+    left: 50%;
+    width: 1700px;
+    height: 850px;
+    background-color: #013567;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 30px black;
+    border-radius: 35px;
+    visibility: hidden; 
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.video_popup_container img{
+    position: fixed;
+    margin-left: 96.5%;
+    margin-top: 1%;
+    width: 40px;
+}
+
+.video_popup_container h1{
+    font-family: SF_BLACK;
+    color: #FFFFFF;
+    margin-left: 95px;
+    margin-top: 40px;
+    font-size: 60px;
+}
+
+.video_box{
+    width: 90%;
+    height: 80%;
+    background-color: #FFFFFF;
+    position: fixed;
+    left: 5%;
+    border-radius: 20px;
+}
+
+.video_box h1{
+    color: #013567;
+    font-family: SF_REGULAR;
+    margin-top: 50px;
+    font-size: 45px;
+    margin-left: 600px;
+    
+}
+
+.video_box_row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.vid_box1, .vid_box2, .vid_box3{
+    width: 440px;
+    height: 440px;
+    background-color: #E8E8E8;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.vid_box1 video{
+    width: 240px;
+    margin-top: 8px;
+    border-radius: 20px;
+}
+
+.vid_box2 video{
+    width: 330px;
+    margin-top: 12px;
+    border-radius: 20px;
+}
+
+.vid_box3 video{
+    width: 420px;
+    margin-top: 25%;
+    border-radius: 20px;
+}
+
+.whole_container#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#video_popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 54%;
+}
+
+.video_textrow{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.vid_text1 h2{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 35px;
+    margin-right: 235px;
+    margin-left: 150px;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 50px;
+}
+
+.vid_text2 h2{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 35px;
+    margin-right: 245px;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 50px;
+}
+
+.vid_text3 h2{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 35px;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 50px;
+}
+
+body:has(.vid_box1:hover) .vid_text1 h2,
+body:has(.vid_box2:hover) .vid_text2 h2,
+body:has(.vid_box3:hover) .vid_text3 h2{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.8s;
+    margin-top: 10px;
+}
+
+/*#################################  G R A P H I C S  #################################*/
+
+#graphics_popup{
+    top: -54%;
+    left: 50%;
+    width: 1700px;
+    height: 850px;
+    background-color: #013567;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 30px black;
+    border-radius: 35px;
+    visibility: hidden; 
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.graphics_popup_container img{
+    position: fixed;
+    margin-left: 96.5%;
+    margin-top: 1%;
+    width: 40px;
+}
+
+.graphics_popup_container h1{
+    font-family: SF_BLACK;
+    color: #FFFFFF;
+    margin-left: 95px;
+    margin-top: 40px;
+    font-size: 60px;
+}
+
+.graphics_box{
+    width: 90%;
+    height: 80%;
+    background-color: #FFFFFF;
+    position: fixed;
+    left: 5%;
+    border-radius: 20px;
+}
+
+.graphics_box h1{
+    color: #013567;
+    font-family: SF_REGULAR;
+    margin-top: 50px;
+    font-size: 45px;
+    margin-left: 600px;
+    
+}
+
+.graphics_box_row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.graphics_box1, .graphics_box2, .graphics_box3{
+    width: 440px;
+    height: 440px;
+    background-color: #E8E8E8;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.graphics_box1 img, .graphics_box2 img, .graphics_box3 img{
+    margin-top: 0;
+    margin-left: 0;
+    width: 440px;
+    height: 440px;
+    position: relative;
+}
+
+.graphics_box1:hover, .graphics_box2:hover, .graphics_box3:hover{
+    transition: 0.8s;
+    transform: translateY(-3vh);
+}
+
+.whole_container#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#graphics_popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 54%;
+}
+
+.graphics_textrow{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.graphics_text1 h2{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 35px;
+    margin-right: 270px;
+    margin-left: 180px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.graphics_text2 h2{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 35px;
+    margin-right: 220px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.graphics_text3 h2{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 35px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+body:has(.graphics_box1:hover) .graphics_text1 h2,
+body:has(.graphics_box2:hover) .graphics_text2 h2,
+body:has(.graphics_box3:hover) .graphics_text3 h2{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.8s;
+}
+
+/*#################################  P R O G R A M M E R  #################################*/
+
+#programmer_popup{
+    top: -54%;
+    left: 50%;
+    width: 1700px;
+    height: 850px;
+    background-color: #013567;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 30px black;
+    border-radius: 35px;
+    visibility: hidden; 
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.programmer_popup_container img{
+    position: fixed;
+    margin-left: 96.5%;
+    margin-top: 1%;
+    width: 40px;
+}
+
+.programmer_popup_container h1{
+    font-family: SF_BLACK;
+    color: #FFFFFF;
+    margin-left: 95px;
+    margin-top: 40px;
+    font-size: 60px;
+}
+
+.programmer_box{
+    width: 90%;
+    height: 80%;
+    background-color: #FFFFFF;
+    position: fixed;
+    left: 5%;
+    border-radius: 20px;
+}
+
+.programmer_box h1{
+    color: #013567;
+    font-family: SF_REGULAR;
+    margin-top: 50px;
+    font-size: 45px;
+    margin-left: 600px;
+    
+}
+
+.programmer_box_row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.programmer_box1, .programmer_box2, .programmer_box3{
+    width: 440px;
+    height: 440px;
+    background-color: #E8E8E8;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.programmer_box1 img, .programmer_box2 img, .programmer_box3 img{
+    margin-top: 0;
+    margin-left: 0;
+    width: 440px;
+    height: 440px;
+    position: relative;
+}
+
+.programmer_box1:hover, .programmer_box2:hover, .programmer_box3:hover{
+    transition: 0.8s;
+    transform: translateY(-3vh);
+}
+
+.whole_container#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#programmer_popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 54%;
+}
+
+.programmer_textrow{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.programmer_text1 h2{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 25px;
+    margin-right: 85px;
+    margin-left: 105px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.programmer_text2 h2{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 25px;
+    margin-right: 50px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.programmer_text3 h2{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 25px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+body:has(.programmer_box1:hover) .programmer_text1 h2,
+body:has(.programmer_box2:hover) .programmer_text2 h2,
+body:has(.programmer_box3:hover) .programmer_text3 h2{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.8s;
+}
+
+/*#################################  W E B D E V  #################################*/
+
+#webdev_popup{
+    top: -54%;
+    left: 50%;
+    width: 1700px;
+    height: 850px;
+    background-color: #013567;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 30px black;
+    border-radius: 35px;
+    visibility: hidden; 
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.webdev_popup_container img{
+    position: fixed;
+    margin-left: 96.5%;
+    margin-top: 1%;
+    width: 40px;
+}
+
+.webdev_popup_container h1{
+    font-family: SF_BLACK;
+    color: #FFFFFF;
+    margin-left: 95px;
+    margin-top: 40px;
+    font-size: 60px;
+}
+
+.webdev_box{
+    width: 90%;
+    height: 80%;
+    background-color: #FFFFFF;
+    position: fixed;
+    left: 5%;
+    border-radius: 20px;
+}
+
+.webdev_box h1{
+    color: #013567;
+    font-family: SF_REGULAR;
+    margin-top: 50px;
+    font-size: 45px;
+    margin-left: 600px;
+    
+}
+
+.webdev_box_row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.webdev_box1, .webdev_box2, .webdev_box3{
+    width: 440px;
+    height: 440px;
+    background-color: #E8E8E8;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.webdev_box1 img, .webdev_box2 img, .webdev_box3 img{
+    margin-top: 0;
+    margin-left: 0;
+    width: 440px;
+    height: 440px;
+    position: relative;
+}
+
+.webdev_box1:hover, .webdev_box2:hover, .webdev_box3:hover{
+    transition: 0.8s;
+    transform: translateY(-3vh);
+}
+
+.whole_container#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#webdev_popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 54%;
+}
+
+.webdev_textrow{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.webdev_text1 h2{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 35px;
+    margin-right: 170px;
+    margin-left: 140px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.webdev_text2 h2{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 35px;
+    margin-right: 120px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.webdev_text3 h2{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 35px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+body:has(.webdev_box1:hover) .webdev_text1 h2,
+body:has(.webdev_box2:hover) .webdev_text2 h2,
+body:has(.webdev_box3:hover) .webdev_text3 h2{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.8s;
+}
+
+/*#################################  E M A I L  #################################*/
+
+#email_popup{
+    top: -54%;
+    left: 50%;
+    width: 1700px;
+    height: 850px;
+    background-color: #013567;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 30px black;
+    border-radius: 35px;
+    visibility: hidden; 
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.email_popup_container img{
+    position: fixed;
+    margin-left: 96.5%;
+    margin-top: 1%;
+    width: 40px;
+}
+
+.email_popup_container h1{
+    font-family: SF_BLACK;
+    color: #FFFFFF;
+    margin-left: 95px;
+    margin-top: 40px;
+    font-size: 60px;
+}
+
+.email_box{
+    width: 90%;
+    height: 80%;
+    background-color: #FFFFFF;
+    position: fixed;
+    left: 5%;
+    border-radius: 20px;
+}
+
+.email_box img{
+    margin-left: 0;
+    margin-top: 0;
+    width: 90%;
+}
+
+.whole_container#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#email_popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 54%;
+}
+
+/*#################################  C O P Y W R I T I N G  #################################*/
+
+#copywriting_popup{
+    top: -54%;
+    left: 50%;
+    width: 1700px;
+    height: 850px;
+    background-color: #013567;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 30px black;
+    border-radius: 35px;
+    visibility: hidden; 
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.copywriting_popup_container img{
+    position: fixed;
+    margin-left: 96.5%;
+    margin-top: 1%;
+    width: 40px;
+}
+
+.copywriting_popup_container h1{
+    font-family: SF_BLACK;
+    color: #FFFFFF;
+    margin-left: 95px;
+    margin-top: 40px;
+    font-size: 60px;
+}
+
+.copywriting_box{
+    width: 90%;
+    height: 80%;
+    background-color: #FFFFFF;
+    position: fixed;
+    left: 5%;
+    border-radius: 20px;
+}
+
+.copywriting_box img{
+    margin-left: 0;
+    margin-top: 0;
+    width: 90%;
+}
+
+.whole_container#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#copywriting_popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 54%;
+}
+
+/*#################################  C O N T A C T  #################################*/
+
+#contact{
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+}
+
+.contact-container{
+    padding: 10px 5%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+}
+
+.contact-row{
+    width: 100%;
+    align-items: center;
+}
+
+.contact-icons{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.contact-quote h1{
+    font-family: SF_MEDIUM;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.contact-logo{
+    text-align: center;
+}
+
+.contact-logo img{
+    width: 400px;
+    margin-top: 120px;
+}
+
+.contact-copyright h1{
+    font-family: SF_REGULAR;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 120px;
+}
