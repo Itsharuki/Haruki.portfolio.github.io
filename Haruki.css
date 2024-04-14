@@ -968,22 +968,28 @@ body:has(.programming h1:hover) .vid-info p,body:has(.programming h1:hover) .gra
     text-align: center;
 }
 
-.vid_box1 video{
-    width: 240px;
-    margin-top: 8px;
-    border-radius: 20px;
+.vid_box1 a{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 35px;
+    margin-top: 50px;
+    text-align: center;
 }
 
-.vid_box2 video{
-    width: 330px;
-    margin-top: 12px;
-    border-radius: 20px;
+.vid_box2 a{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 35px;
+    margin-top: 50px;
+    text-align: center;
 }
 
-.vid_box3 video{
-    width: 420px;
-    margin-top: 25%;
-    border-radius: 20px;
+.vid_box3 a{
+    font-family: SF_BLACK;
+    color: black;
+    font-size: 35px;
+    margin-top: 50px;
+    text-align: center;
 }
 
 .whole_container#blur.active{
